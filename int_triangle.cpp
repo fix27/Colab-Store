@@ -8,6 +8,7 @@ bool isPerfectSquare(long long n){
 }
   
 int main() { 
+  cout.precision(20);
   for(int a = 3; a < 20000; a++)
   {
    if (a % 500 == 0) cout << "a=" << a << std::endl;
