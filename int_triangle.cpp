@@ -13,7 +13,7 @@ int main() {
   {
    if (a % 500 == 0) cout << "a=" << a << std::endl;
    for(int b = a; b < a+a+a; b++)
-    for(int c = b; c < b+b+b; c++)
+    for(int c = b; c < a+b; c++)
      {
       long double p=(a+b+c)/2;
       if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) &&  isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
