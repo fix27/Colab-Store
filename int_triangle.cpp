@@ -3,7 +3,7 @@
 using namespace std;
 
 bool isPerfectSquare(long long n){
-    long long squareRootN=(long long)(sqrt((double)n)+0.5);
+    long long squareRootN=(long long)(sqrt(0.01+(double)n)+0.5);
     return squareRootN*squareRootN == n;
 }
   
