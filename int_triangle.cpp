@@ -16,7 +16,7 @@ int main() {
    for (int b = a; b < a+a+a; b ++ )
     for (int c = b; c < b+b+b; c ++ )
 
-      p=(a+b+c)/2
+      p=(a+b+c)/2;
       if (is_perfect_square(p*(p-a)*(p-b)*(p-c)) && ((is_perfect_square(2*b**2+2*c**2-a**2) | True) && is_perfect_square(2*a**2+2*c**2-b**2) && is_perfect_square(2*a**2+2*b**2-c**2)) )
       
       {
