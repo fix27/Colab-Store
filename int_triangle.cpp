@@ -15,8 +15,9 @@ int main() {
   for(int a = 3; a < 20000; a++)
    for(int b = a; b < a+a+a; b++)
     for(int c = b; c < b+b+b; c++)
+     {
       p=(a+b+c)/2;
-      if (is_perfect_square(p*(p-a)*(p-b)*(p-c)) && ((is_perfect_square(2*b*b+2*c*c-a*a) | True) && is_perfect_square(2*a*a+2*c*c-b*b) && is_perfect_square(2*a*a+2*b*b-c*c)) )
+      if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) && ((isPerfectSquare(2*b*b+2*c*c-a*a) | True) && isPerfectSquare(2*a*a+2*c*c-b*b) && isPerfectSquare(2*a*a+2*b*b-c*c)) )
       {
        cout << a;
        cout << b;
@@ -26,6 +27,7 @@ int main() {
        cout << (sqrt(2*a*a+2*b*b-c*c))/2;
        cout << sqrt((p*(p-a)*(p-b)*(p-c))));
       }
+    }
 
   return 0; 
 } 
