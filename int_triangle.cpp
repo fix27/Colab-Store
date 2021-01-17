@@ -14,7 +14,8 @@ int main() {
     for(int c = b; c < b+b+b; c++)
      {
       p=(a+b+c)/2;
-      if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) &&  isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c) )
+      if (a % 500) cout << "a=" << a << std::endl;
+      if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) && isPerfectSquare(2*b*b+2*c*c-a*a) &&  isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
       {
        std::cout  << a << " ";
        std::cout  << b << " ";
