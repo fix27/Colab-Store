@@ -2,14 +2,10 @@
 #include <cmath> 
 using namespace std;
 
-bool isPerfectSquare(long double x) 
-{   
-  // Find floating point value of  
-  // square root of x. 
-  long double sr = sqrt(x); 
-  // If square root is an integer 
-  return ((sr - floor(sr)) == 0); 
-} 
+bool isPerfectSquare(long long n){
+    long long squareRootN=(long long)(sqrt((double)n)+0.5);
+    return squareRootN*squareRootN == n;
+}
   
 int main() { 
   long int p = 0;
