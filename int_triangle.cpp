@@ -9,10 +9,10 @@ bool isPerfectSquare(long long n){
   
 int main() { 
   cout.precision(20);
-  for(int a = 3; a < 20000; a++)
+  for(int a = 9308 ; a < 20000; a++)
   {
    if (a % 500 == 0) cout << "a=" << a << std::endl;
-   for(int b = a; b < a+a+a; b++)
+   for(int b = a+1; b < a+a+a; b++)
     for(int c = b; c < a+b; c++)
      {
       long double p=(a+b+c)/2;
