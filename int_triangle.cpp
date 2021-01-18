@@ -7,26 +7,33 @@ bool isPerfectSquare(long long n){
     return squareRootN*squareRootN == n && n>3;
 }
   
-int main() { 
+int main(int argc, char* argv[]) { 
   cout.precision(20);
-  for(long  a = 9308 ; a < 20000; a++)
+  if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
   {
-   if (a % 500 == 0) cout << "a=" << a << std::endl;
-   for(long  b = a+1; b < a+a+a; b++)
-    for(long  c = b; c < a+b; c++)
-     {
-      long double p=(a+b+c)/2;
-      if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) &&  isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
+      long ar1 = stoi(argv[1]);
+      long ar2 = stoi(argv[2]);
+      long ar3 = stoi(argv[3]);
+      
+      for(long  a = ar1 ; a < ar2; a++)
       {
-       std::cout  << a << " ";
-       std::cout  << b << " ";
-       std::cout  << c << " ";
-       std::cout  << (sqrt(2*b*b+2*c*c-a*a))/2 << " ";
-       std::cout  << (sqrt(2*a*a+2*c*c-b*b))/2 << " ";
-       std::cout  << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
-       std::cout  << sqrt((p*(p-a)*(p-b)*(p-c))) << std::endl;
-      }
-     }
-    }
+       if (a % 500 == 0) cout << "a=" << a << std::endl;
+       for(long  b = a+1; b < ar3; b++)
+       for(long  c = b; c < a+b; c++)
+        {
+         long double p=(a+b+c)/2;
+         if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) &&  isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
+         {
+           std::cout  << a << " ";
+          std::cout  << b << " ";
+          std::cout  << c << " ";
+           std::cout  << (sqrt(2*b*b+2*c*c-a*a))/2 << " ";
+           std::cout  << (sqrt(2*a*a+2*c*c-b*b))/2 << " ";
+           std::cout  << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
+           std::cout  << sqrt((p*(p-a)*(p-b)*(p-c))) << std::endl;
+          }
+         }
+        }
+  }
   return 0; 
 } 
