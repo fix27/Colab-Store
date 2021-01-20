@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
       
       for(long  a = ar1 ; a < ar2; a++)
       {
-       if (a % 500 == 0) cout << "a=" << a << std::endl;
+       if (a % 100 == 0) cout << "a=" << a << std::endl;
        for(long  b = a+1; b < ar3; b++)
        for(long  c = b; c < a+b; c++)
         {
