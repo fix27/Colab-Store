@@ -19,11 +19,13 @@ int main(int argc, char* argv[]) {
       {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
        for(long  b = a+1; b < ar3; b++)
-       for(long  c = b; c < a+b; c++)
+       {    
+        double pab=(a+b)/2;   
+        for(long  c = b; c < a+b; c++)
         {
-         long double p=(a+b+c)/2;
-         if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) &&  isPerfectSquare(2*b*b+2*c*c-a*a) && isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
-         {
+         double p=pab+c/2;
+         if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) && isPerfectSquare(2*b*b+2*c*c-a*a) && isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
+          {
            std::cout  << a << " ";
            std::cout  << b << " ";
            std::cout  << c << " ";
@@ -32,8 +34,9 @@ int main(int argc, char* argv[]) {
            std::cout  << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
            std::cout  << sqrt((p*(p-a)*(p-b)*(p-c))) << std::endl;
           }
-         }
         }
+       }
+      }
   }
   return 0; 
 } 
