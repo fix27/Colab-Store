@@ -4,7 +4,7 @@ using namespace std;
 
 bool isPerfectSquare(long double n){
     long double intpart; // целая часть
-    return n>3 && modf(sqrt(n), &intpart) == 0 ;
+    return n>3 && modfl(sqrt(n), &intpart) == 0 ;
 }
   
 int main(int argc, char* argv[]) { 
