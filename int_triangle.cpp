@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
        for(long long  b = a+1; b < ar3; b++)
        {    
-        p=(a+b+b)/2-0.5;
+        p=a/2+b-0.5;
         for(long long  c = b; c < a+b; c++)
         {
          p+=0.5;
