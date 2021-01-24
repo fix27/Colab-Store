@@ -3,7 +3,7 @@
 using namespace std;
 
 bool isPerfectSquare(long long n){
-    long long squareRootN=(long long)(sqrt((double)n)+0.5);
+    long long squareRootN=(long long)(sqrt((long double)n)+0.5);
     return squareRootN*squareRootN == n && n>3;
 }
   
@@ -11,19 +11,19 @@ int main(int argc, char* argv[]) {
   cout.precision(20);
   if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
   {
-      long ar1 = stoi(argv[1]);
-      long ar2 = stoi(argv[2]);
-      long ar3 = stoi(argv[3]);
+      long long ar1 = stoi(argv[1]);
+      long long ar2 = stoi(argv[2]);
+      long long ar3 = stoi(argv[3]);
       
-      for(long  a = ar1 ; a < ar2; a++)
+      for(long long  a = ar1 ; a < ar2; a++)
       {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
-       for(long  b = a+1; b < ar3; b++)
+       for(long long  b = a+1; b < ar3; b++)
        {    
-        double pab=(a+b)/2;   
-        for(long  c = b; c < a+b; c++)
+        long double p=(a+b+b)/2-0.5;   
+        for(long long  c = b; c < a+b; c++)
         {
-         double p=pab+c/2;
+         long double p+=0.5;
          if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) && isPerfectSquare(2*b*b+2*c*c-a*a) && isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
           {
            std::cout  << a << " ";
