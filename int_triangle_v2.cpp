@@ -2,11 +2,6 @@
 #include <cmath> 
 using namespace std;
 
-bool isPerfectSquare(long double n){
-    long double intpart; // целая часть
-    return n>3 && modfl(sqrt(n), &intpart) == 0.0 ;
-}
-  
 int main(int argc, char* argv[]) { 
   cout.precision(20);
   if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
@@ -20,15 +15,19 @@ int main(int argc, char* argv[]) {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
        for(long long  b = a+1; b < ar3; b++)
        {    
-        long double p=(a+b+b)/2-0.5;   
+        long double p=(a+b+b)/2-0.5;  
+        long double intpart;
         for(long long  c = b; c < a+b; c++)
         {
          p+=0.5;
-         if (isPerfectSquare(p*(p-a)*(p-b)*(p-c)) && isPerfectSquare(2*b*b+2*c*c-a*a) && isPerfectSquare(2*a*a+2*c*c-b*b) &&  isPerfectSquare(2*a*a+2*b*b-c*c))
+         if  (  modfl(sqrt(p*(p-a)*(p-b)*(p-c)), &intpart) == 0.0 
+             && modfl(sqrt(2*b*b+2*c*c-a*a), &intpart) == 0.0 
+             && modfl(sqrt(2*a*a+2*c*c-b*b), &intpart) == 0.0 
+             && modfl(sqrt(2*a*a+2*b*b-c*c), &intpart) == 0.0)
           {
-           std::cout << a << " " << b << " " << c << " ";
-           std::cout << (sqrt(2*b*b+2*c*c-a*a))/2 << " " << (sqrt(2*a*a+2*c*c-b*b))/2 << " " << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
-           std::cout << sqrt((p*(p-a)*(p-b)*(p-c))) << std::endl;
+            std::cout << a << " " << b << " " << c << " ";
+            std::cout << (sqrt(2*b*b+2*c*c-a*a))/2 << " " << (sqrt(2*a*a+2*c*c-b*b))/2 << " " << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
+            std::cout << sqrt((p*(p-a)*(p-b)*(p-c))) << std::endl;
           }
         }
        }
