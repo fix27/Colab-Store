@@ -2,9 +2,8 @@
 #include <cmath> 
 using namespace std;
 
-bool isPerfectSquare(long long n){
-    long long squareRootN=(long long)(sqrt((long double)n)+0.5);
-    return squareRootN*squareRootN == n && n>3;
+bool isPerfectSquare(long double n){
+    return n>3 && pow(round(sqrt(n)),2) == n ;
 }
   
 int main(int argc, char* argv[]) { 
