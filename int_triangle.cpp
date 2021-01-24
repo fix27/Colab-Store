@@ -9,14 +9,14 @@ int main(int argc, char* argv[]) {
       long long ar1 = stoi(argv[1]);
       long long ar2 = stoi(argv[2]);
       long long ar3 = stoi(argv[3]);
-      
+      long double intpart;
+      long double p;
       for(long long  a = ar1 ; a < ar2; a++)
       {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
        for(long long  b = a+1; b < ar3; b++)
        {    
-        long double p=(a+b+b)/2-0.5;  
-        long double intpart;
+        p=(a+b+b)/2-0.5;
         for(long long  c = b; c < a+b; c++)
         {
          p+=0.5;
