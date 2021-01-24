@@ -3,7 +3,8 @@
 using namespace std;
 
 bool isPerfectSquare(long double n){
-    return n>3 && pow(round(sqrt(n)),2) == n ;
+    long intpart;                     // целая часть
+    return n>3 && modf(sqrt(n), &intpart) == 0 ;
 }
   
 int main(int argc, char* argv[]) { 
