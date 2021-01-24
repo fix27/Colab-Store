@@ -3,7 +3,7 @@
 using namespace std;
 
 bool isPerfectSquare(long double n){
-    long intpart; // целая часть
+    long double part; // целая часть
     return n>3 && modf(sqrt(n), &intpart) == 0 ;
 }
   
