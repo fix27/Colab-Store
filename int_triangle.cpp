@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
         for(long long c = b; c < a+b; c++)
         {
          //p+=0.5;
-         std::cout << sqr16(c);
+         std::cout << sqr16(c) << " " << c << " ";
          if  (  modfl(sqrt(0 - (a - b - c) * (a + b - c) * (a - b + c) * (a + b + c)), &intpart) == 0.0 
              && modfl(sqrt(2*b*b+2*c*c-a*a), &intpart) == 0.0 
              && modfl(sqrt(2*a*a+2*c*c-b*b), &intpart) == 0.0 
