@@ -20,10 +20,7 @@ int main(int argc, char* argv[]) {
         for(long long  c = b; c < a+b; c++)
         {
          p+=0.5;
-         if  (  modfl(sqrt(p*(p-a)*(p-b)*(p-c)), &intpart) == 0.0 
-             && modfl(sqrt(2*b*b+2*c*c-a*a), &intpart) == 0.0 
-             && modfl(sqrt(2*a*a+2*c*c-b*b), &intpart) == 0.0 
-             && modfl(sqrt(2*a*a+2*b*b-c*c), &intpart) == 0.0)
+         if  (  modfl(sqrt(p*(p-a)*(p-b)*(p-c))+sqrt(2*b*b+2*c*c-a*a)+sqrt(2*a*a+2*c*c-b*b)+sqrt(2*a*a+2*b*b-c*c), &intpart) == 0.0 )
           {
             std::cout << a << " " << b << " " << c << " ";
             std::cout << (sqrt(2*b*b+2*c*c-a*a))/2 << " " << (sqrt(2*a*a+2*c*c-b*b))/2 << " " << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
