@@ -1,7 +1,5 @@
-#define _GLIBCXX_USE_INT128 1
 #include <iostream>
 #include <cmath> 
-
 
 int main(int argc, char* argv[]) { 
   cout.precision(20);
