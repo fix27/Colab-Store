@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
           {
             std::cout << a << " " << b << " " << c << " ";
             std::cout << (sqrt(2*b*b+2*c*c-a*a))/2 << " " << (sqrt(2*a*a+2*c*c-b*b))/2 << " " << (sqrt(2*a*a+2*b*b-c*c))/2 << " ";
-            std::cout << sqrt(p*(p-a)*(p-b)*(p-c)) << std::endl;
+            std::cout << sqrt((a + b + c)/2*((a + b + c)/2-a)*((a + b + c)/2-b)*((a + b + c)/2-c)) << std::endl;
           }
         }
        }
