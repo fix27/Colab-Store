@@ -11,16 +11,16 @@ int main(int argc, char* argv[]) {
       long long ar3 = stoi(argv[3]); // 5000
       long double intpart;
       //long double p;
-      for(long long  a = ar1 ; a < ar2; a++)
+      for(__int128  a = ar1 ; a < ar2; a++)
       {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
-       for(long long  b = a+1; b < ar3; b++)
+       for(__int128  b = a+1; b < ar3; b++)
        {    
         //p=a/2+b-0.5;
-        for(long long  c = b; c < a+b; c++)
+        for(__int128  c = b; c < a+b; c++)
         {
          //p+=0.5;
-         if  (  modfl(sqrt(0 - (a - b - c) * (a + b - c) * (a - b + c) * (long double) (a + b + c)), &intpart) == 0.0 
+         if  (  modfl(sqrt(0 - (a - b - c) * (a + b - c) * (a - b + c) * (a + b + c)), &intpart) == 0.0 
              && modfl(sqrt(2*b*b+2*c*c-a*a), &intpart) == 0.0 
              && modfl(sqrt(2*a*a+2*c*c-b*b), &intpart) == 0.0 
              && modfl(sqrt(2*a*a+2*b*b-c*c), &intpart) == 0.0)
