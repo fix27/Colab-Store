@@ -2,24 +2,6 @@
 #include <cmath> 
 using namespace std;
 
-bool sqr16(uint16_t n) {
-  if (n % 8 != 1) return 0;
-  uint16_t sqr = (n + 1) / 2;  //4 bit
-  uint16_t inv = 2 - sqr;
-
-  sqr += inv * (n-sqr*sqr)/2;   //6 bit
-  inv *= 2 - sqr * inv;
-
-  sqr += inv * (n-sqr*sqr)/2;  //10 bit
-  //inv *= 2 - sqr * inv;
-
-  if (sqr & 256)
-    sqr = 0u - sqr;
-  sqr = (uint8_t)sqr; // lowest root
-  if (n == sqr*sqr) return true;
-  return false;
-}
-
 int main(int argc, char* argv[]) { 
   cout.precision(20);
   if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
@@ -38,7 +20,6 @@ int main(int argc, char* argv[]) {
         for(long long c = b; c < a+b; c++)
         {
          //p+=0.5;
-         std::cout << sqr16(c) << " " << c << " ";
          if  (  modfl(sqrt(0 - (a - b - c) * (a + b - c) * (a - b + c) * (a + b + c)), &intpart) == 0.0 
              && modfl(sqrt(2*b*b+2*c*c-a*a), &intpart) == 0.0 
              && modfl(sqrt(2*a*a+2*c*c-b*b), &intpart) == 0.0 
