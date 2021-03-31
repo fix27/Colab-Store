@@ -1,7 +1,7 @@
+#define _GLIBCXX_USE_INT128 1
 #include <iostream>
 #include <cmath> 
-#include <boost/multiprecision/cpp_int.hpp>
-using namespace std;
+
 
 int main(int argc, char* argv[]) { 
   cout.precision(20);
@@ -12,13 +12,13 @@ int main(int argc, char* argv[]) {
       long long ar3 = stoi(argv[3]); // 5000
       long double intpart;
       //long double p;
-      for(int128_t  a = ar1 ; a < ar2; a++)
+      for(__int128   a = ar1 ; a < ar2; a++)
       {
        if (a % 100 == 0) cout << "a=" << a << std::endl;
-       for(int128_t  b = a+1; b < ar3; b++)
+       for(__int128   b = a+1; b < ar3; b++)
        {    
         //p=a/2+b-0.5;
-        for(int128_t  c = b; c < a+b; c++)
+        for(__int128   c = b; c < a+b; c++)
         {
          //p+=0.5;
          if  (  modfl(sqrt(0 - (a - b - c) * (a + b - c) * (a - b + c) * (a + b + c)), &intpart) == 0.0 
