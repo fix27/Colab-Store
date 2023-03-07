@@ -9,7 +9,8 @@ int main(int argc, char* argv[]) {
                 long long s = (a + b + c) / 2; // полупериметр
                 long long area2 = s * (s - a) * (s - b) * (s - c)
                 long long area = sqrt(area2); // площадь треугольника
-                if ( area*area=area2)
+                if (area*area=area2)
+                {
                     long long medA = sqrt(2 * b * b + 2 * c * c - a * a) / 2; // медиана, проведенная из вершины A
                     long long medB = sqrt(2 * a * a + 2 * c * c - b * b) / 2; // медиана, проведенная из вершины B
                     long long medC = sqrt(2 * a * a + 2 * b * b - c * c) / 2; // медиана, проведенная из вершины C
@@ -20,6 +21,7 @@ int main(int argc, char* argv[]) {
                         cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
                         cout << "S: " << sqrt(s * (s - a) * (s - b) * (s - c)) << endl;
                     }
+                }
             }
         }
     }
