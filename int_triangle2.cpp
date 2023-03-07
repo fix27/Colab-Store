@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
     for (int a = 1; a <= 10000; a++) {
         for (int b = a; b <= 10000; b++) {
-            for (int c = b; c < a+b; c++) {
+            for (int c = b+1; c < a+b; c++) {
                 int s = (a + b + c) / 2; // полупериметр
                 int medA = sqrt(2 * b * b + 2 * c * c - a * a) / 2; // медиана, проведенная из вершины A
                 int medB = sqrt(2 * a * a + 2 * c * c - b * b) / 2; // медиана, проведенная из вершины B
