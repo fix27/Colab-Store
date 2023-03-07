@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
                 int medC = sqrt(2 * a * a + 2 * b * b - c * c) / 2; // медиана, проведенная из вершины C
                 int area = sqrt(s * (s - a) * (s - b) * (s - c)); // площадь треугольника
                 int meds = (medA + medB + medC) / 2;
-                if (area = sqrt(meds * (meds - medA) * (meds - medB) * (meds - medC))*3/4;// проверка, что это треугольник с медианами
+                if (area == sqrt(meds * (meds - medA) * (meds - medB) * (meds - medC))*3/4;// проверка, что это треугольник с медианами
                     && area % 6 == 0) // проверка, что площадь кратна 6
                 {
                     cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
