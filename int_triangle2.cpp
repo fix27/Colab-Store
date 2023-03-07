@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
     for (long long a = 1; a <= 100900; a++) {
         for (long long b = a + 1; b <= 109000; b++) {
-            for (long long c = b+1; c < a+b; c++) {
+            for (long long c = b + 2; c < a+b; c++) {
                 long long s = (a + b + c) / 2; // полупериметр
                 //long long area = sqrt(s * (s - a) * (s - b) * (s - c)); // площадь треугольника                
                 long long medA = sqrt(2 * b * b + 2 * c * c - a * a) / 2; // медиана, проведенная из вершины A
