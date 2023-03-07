@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
                 {
                     cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
                     cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
+                    long long s = (a + b + c) / 2; // полупериметр
                     cout << "S: " << sqrt(s * (s - a) * (s - b) * (s - c)) << endl;
                 }
             }
