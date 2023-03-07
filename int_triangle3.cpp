@@ -12,10 +12,15 @@ int main(int argc, char* argv[]) {
                 long long medC = sqrt(2 * a * a + 2 * b * b - c * c) / 2; // медиана, проведенная из вершины C
                 if ( ((a*a) + (b*b) + (c*c))*3 == ((medA * medA) + (medB * medB) + (medC * medC))*4 )
                 {
-                    cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
-                    cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
                     long long s = (a + b + c) / 2; // полупериметр
-                    cout << "S: " << sqrt(s * (s - a) * (s - b) * (s - c)) << endl;
+                    long long meds = (medA + medB + medC) / 2;
+                    if ( (s * (s - a) * (s - b) * (s - c))*9 == (meds * (meds - medA) * (meds - medB) * (meds - medC))*16)
+                    {   
+                       cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
+                       cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
+                       cout << "S: " << sqrt(s * (s - a) * (s - b) * (s - c)) << endl;
+                    }
+
                 }
             }
         }
