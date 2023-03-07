@@ -6,8 +6,8 @@ int main(int argc, char* argv[]) {
     for (long long a = 1; a <= 100900; a++) {
         for (long long b = a ; b <= 109000; b++) {
             for (long long c = b+1 ; c < a+b-2; c++) {
-                long long s = (a + b + c) / 2; // полупериметр
-                long long area2 = s * (s - a) * (s - b) * (s - c);
+                //long long s = (a + b + c) / 2; // полупериметр
+                long long area2 = (a+b+c)*(b+c-a)*(a+c-b)*(a+b-c)/16;
                 long long area = sqrt(area2); // площадь треугольника
                 if (area*area==area2)
                 {
