@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
                     {   
                        cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
                        cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
-                       cout << "S: " << area) << endl;
+                       cout << "S: " << area << endl;
                     }
 
                 }
