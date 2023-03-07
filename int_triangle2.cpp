@@ -12,8 +12,7 @@ int main(int argc, char* argv[]) {
                 long long medB = sqrt(2 * a * a + 2 * c * c - b * b) / 2; // медиана, проведенная из вершины B
                 long long medC = sqrt(2 * a * a + 2 * b * b - c * c) / 2; // медиана, проведенная из вершины C
                 long long meds = (medA + medB + medC) / 2;
-                if ( (s * (s - a) * (s - b) * (s - c))*16 == (meds * (meds - medA) * (meds - medB) * (meds - medC))*9 // проверка, что это треугольник с медианами
-                    ) // проверка, что площадь кратна 6 area area!=0  &&
+                if ( (s * (s - a) * (s - b) * (s - c))*16 == (meds * (meds - medA) * (meds - medB) * (meds - medC))*9 )
                 {
                     cout << "a,b,c: " << a << ", " << b << ", " << c << endl;
                     cout << "Медианы: " << medA << ", " << medB << ", " << medC << endl;
